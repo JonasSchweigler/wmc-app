@@ -13,51 +13,36 @@ import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { DarkTheme } from "@react-navigation/native";
 
-export default function HomeScreen() {
+export default function StatScreen() {
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: "#D0D0D0", dark: "#353636" }}
     >
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type='title'>Wilkommen!</ThemedText>
-        <HelloWave />
+        <ThemedText type='title'>Bilanz & Stats</ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type='subtitle'>Fehlstunden Überblick</ThemedText>
-        <ThemedText>
-          Hier können die Fehlstunden der Schüler der BHIF20 beobachtet werden.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type='subtitle'>Ranking</ThemedText>
-        <ThemedText>
-          Mittels des coolen Ranking Features lässt sich leicht erkennen, welche
-          Schüler am meisten Fehlstunden haben.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type='subtitle'>Stats</ThemedText>
+        <ThemedText type='subtitle'>Bilanz</ThemedText>
         <ThemedText>
           Hier erstellen wir eine gesamte Bilanz der Fehlstunden. Diese bezieht
           sich jedoch auf alle Schüler zusammen.
         </ThemedText>
+      </ThemedView>
+      <ThemedView style={styles.divider} />
+      <ThemedView style={styles.statsContainer}>
+        <ThemedText>hoho</ThemedText>
       </ThemedView>
     </ParallaxScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: StatusBar.currentHeight,
+  divider: {
+    borderBottomColor: "#687076",
+    borderBottomWidth: 2,
   },
 
-  wrapper: {
-    flex: 1,
-    padding: 32,
-    gap: 16,
-    overflow: "hidden",
-  },
+  statsContainer: {},
 
   titleContainer: {
     flexDirection: "row",
