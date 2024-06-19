@@ -7,11 +7,9 @@ import {
   StatusBar,
 } from "react-native";
 
-import { HelloWave } from "@/components/HelloWave";
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
-import { DarkTheme } from "@react-navigation/native";
 
 export default function StatScreen() {
   return (
@@ -22,7 +20,6 @@ export default function StatScreen() {
         <ThemedText type='title'>Bilanz & Stats</ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type='subtitle'>Bilanz</ThemedText>
         <ThemedText>
           Hier erstellen wir eine gesamte Bilanz der Fehlstunden. Diese bezieht
           sich jedoch auf alle Schüler zusammen.
@@ -30,7 +27,12 @@ export default function StatScreen() {
       </ThemedView>
       <ThemedView style={styles.divider} />
       <ThemedView style={styles.statsContainer}>
-        <ThemedText>hoho</ThemedText>
+        <ThemedText type='defaultSemiBold'>Fehlstunden gesamt:</ThemedText>
+        <ThemedText>100</ThemedText>
+      </ThemedView>
+      <ThemedView style={styles.statsContainer}>
+        <ThemedText type='defaultSemiBold'>Fehlstunden gesamt:</ThemedText>
+        <ThemedText>100</ThemedText>
       </ThemedView>
     </ParallaxScrollView>
   );
@@ -42,7 +44,10 @@ const styles = StyleSheet.create({
     borderBottomWidth: 2,
   },
 
-  statsContainer: {},
+  statsContainer: {
+    flexDirection: "row",
+    gap: 4,
+  },
 
   titleContainer: {
     flexDirection: "row",
